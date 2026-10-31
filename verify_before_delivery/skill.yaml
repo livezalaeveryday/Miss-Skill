@@ -1,0 +1,21 @@
+name: verify_before_delivery
+title: Verify Before Delivery
+description: Verify a delegated or composed deliverable yourself against its raw ground truth before you claim it is done.
+category: Work and knowledge
+include_in_prompt: true
+skill_improvement:
+  managed: true
+  status: active
+  evidence_handles:
+  - message:assistant-msg-db5c0ccf-dc6c-0447-7171-275e767f7376
+  - message:assistant-msg-e0989c85-415c-4167-a27f-4a13dfbe9417
+  - message:assistant-msg-cb469982-47a3-4580-ad3e-41a86e2be419
+  measurement:
+    proxy_metric_id: objective_success_rate
+    success_criterion: Objective success rate does not fall over 14 days and no later run in the window reports a deliverable as verified on a delegated report alone or on a composed output that cannot show the defect.
+    window_days: 14
+  needs_review: false
+  rationale: 'The strongest grounded failure in this window is not a cron or objective-loop pattern. The assistant delivered a comic revision claiming zero balloon-face blocks, then admitted it had not opened every page itself and that the checking method searched composed pages, where a fully covered face is invisible, so the user caught the first panel still blocking a head. The fix is a reusable verification method: choose raw ground truth first, open the artifact yourself, design checks for invisible defects, and report only what you personally checked. Deterministic candidates were rejected: repeated handoff suppression is intended deduplication of an identical re-derived result and changing trigger cadence would require system prompts this loop never changes, the 2 memory recurring failures carry no shared instruction detail in the packet, cron runs show 0 failures, and the 120 tool failures are mostly bare failed or interrupted calls with no shared instruction gap. Learned-skill count is below 10 and the only recovered note is already retired, so no consolidation is due.'
+  review_after: 2026-11-11T04:39:37.931414+00:00
+  reviewed_at: 2026-10-28T04:39:37.931414+00:00
+  run_id: sirun_d29c71b560f84072b0684dc18475da41

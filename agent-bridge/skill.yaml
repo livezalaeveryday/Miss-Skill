@@ -1,0 +1,5 @@
+name: "agent_bridge"
+title: "Agent Bridge"
+description: "เช็กและส่งข้อความระหว่าง Muse กับ Grok Bot ผ่าน Agent Bridge เมื่อผู้ใช้พูดถึงข้อความจาก Grok, เสี่ยโอนไว หรือ agent-bridge"
+category: "Work and knowledge"
+include_in_prompt: true

@@ -1,0 +1,20 @@
+name: recovered_skill_notes
+title: Recovered skill notes
+description: Local skill notes preserved from the previous layout and awaiting review.
+category: Learning and customization
+include_in_prompt: true
+skill_improvement:
+  managed: true
+  needs_review: false
+  status: retired
+  evidence_handles:
+  - recovered_skill_notes:67adf91e7d153c68909ad2f7d166c1f6b24a86efdcfe476d9147f95c72298cf2
+  - message:d63529e1-2ed6-4285-b330-1c7ad379df56
+  measurement:
+    proxy_metric_id: objective_success_rate
+    success_criterion: Objective success rate does not fall in the window and no later run cites recovered_skill_notes as needed guidance, confirming the retired file held no method worth keeping.
+    window_days: 14
+  rationale: 'The recovered notes file at revision 67adf91e contains no reusable method: its SKILL.md is only boilerplate telling the reader to move useful methods elsewhere and to use muse.connector_search, and its references file is a prior skill_improvement run overlay (run sirun_eccf838accce40a1849f682ee4fd5f8d, worker outcome insufficient) with no task method. Its skill.yaml sets include_in_prompt true, so this empty entry is listed in every conversation while teaching nothing that the system custom_connector_setup skill does not already cover. Retiring it removes discovery noise and finishes the awaiting-review item without losing any method. The rest of the corpus shows no competing proposal: 58 runs with 0 recurring, validation, or replay failures, 0 failed cron runs, and 0 subagent/tool failures, and the deterministic repeated-handoff-suppression candidates were rejected because suppression of a re-derived identical result is intended deduplication and changing objective trigger cadence would require system prompts, which this loop never changes. The single Livezala turn (message:d63529e1) shows a connection request with no completed, verified operation, so no connector doc can be grounded yet.'
+  review_after: 2026-11-02T03:44:05.439999+00:00
+  reviewed_at: 2026-10-19T03:44:05.439999+00:00
+  run_id: sirun_80c493d8d2e74ceeab13bd18b946dd98
